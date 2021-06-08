@@ -396,65 +396,90 @@
 
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg class="modal-svg-btn">
                     <use href="./images/sprite.svg#icon-close"></use>
                 </svg>
             </button>
+
             <div class="inputs">
-                <form class="form js-speaker-form">
+                <form class="modal-form" action="#">
+                    <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+                    
                     <div class="form-field">
                         <label class="form-label" for="name">Имя</label>
-                        <input class="form-input" 
-                            type="text" 
-                            name="name" 
-                            id="name" 
-                        />
-                    </div>
-                    <div class="form-field">
-                        <label for="tel">Телефон</label>
-                        <input 
-                            type="tel" 
-                            name="tel" 
-                            id="tel" 
-                        />
+                        <span class="form-modal-input-wrapper">
+                            <input class="form-input" 
+                                type="text" 
+                                name="name" 
+                                id="name"
+                                minlength="2"
+                                required
+                                placeholder="Ivan Ivanov" 
+                            />
+                            <svg class="modal-svg-btn-icon">
+                                <use href="./images/sprite.svg#icon-person-black"></use>
+                            </svg>
+                        </span>
                     </div>
 
                     <div class="form-field">
-                        <label for="mail">Почта</label>
-                        <input 
-                            type="email" 
-                            name="mail" 
-                            id="mail" 
-                        />
+                        <label class="form-label" for="tel">Телефон</label>
+                        <span class="form-modal-input-wrapper">
+                            <input class="form-input" 
+                                type="tel" 
+                                name="tel" 
+                                id="tel"
+                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                                title="096-111-11-11"
+                                required
+                                placeholder="096-111-11-11"
+                            />
+                            <svg class="modal-svg-btn-icon">
+                                <use href="./images/sprite.svg#icon-phone-black"></use>
+                            </svg>
+                        </span>
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label" for="mail">Почта</label>
+                        <span class="form-modal-input-wrapper">
+                            <input class="form-input" 
+                                type="email" 
+                                name="mail" 
+                                id="mail"
+                                placeholder="my@mail.com" 
+                            />
+                            <svg class="modal-svg-btn-icon">
+                                <use href="./images/sprite.svg#icon-email-black"></use>
+                            </svg>
+                        </span>
                     </div>
 
                     <div class="form-field">
                         <label for="coment">Комментарий</label>
-                        <textarea 
+                        <textarea class="modal-form-message" 
                             name="coment" 
                             id="coment" 
-                            cols="30" 
-                            rows="10" 
                             placeholder="Введите текст"
                         ></textarea>
                     </div>
-                </div>
+                    </div>
 
-                <div class="checkbox-input">
-                    <input class=""
-                        type="checkbox" 
-                        name="" 
-                        value="Соглашаюсь с рассылкой и принимаю Условия договора"
-                        id="Соглашаюсь с рассылкой и принимаю Условия договора" 
-                    />
-                    <label class="" for="Соглашаюсь с рассылкой и принимаю Условия договора">Соглашаюсь с рассылкой и принимаю Условия договора</label>
-                </div>
-                <div>
-                    <button class="hero-button" type="submit">Отправить</button>
-                </div>
-            </form>
+                    <div class="checkbox-input">
+                        <input class="checkbox-modal-form"
+                            type="checkbox" 
+                            name="" 
+                            id="checkbox-pollicy"
+                        />
+                        <label class="checkbox-modal-form-pollicy" for="checkbox-pollicy">Соглашаюсь с рассылкой и принимаю <a class="modal-form-policy-link" href="">Условия договора</a></label>
+                    </div>
+                    
+                    <div>
+                        <button class="hero-button" type="submit">Отправить</button>
+                    </div>
+                </form>
+            
         </div>
     </div>
 
