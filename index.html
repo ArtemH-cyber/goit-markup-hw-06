@@ -391,9 +391,25 @@
                     </li>
                 </ul>
             </div>
+   <!-- =========================footer-form==================================================== -->
+            <div class="footer-form">
+                <form class="footer-modal-form" action="#">
+                    <label class="footer-form-label" for="mail">Подпишитесь на рассылку</label>
+                    <div class="footer-form-input-button">
+                        <input class="footer-form-input" type="email" name="mail" id="mail" placeholder="E-mail" required />
+                        <div class="footer-button-svg">
+                            <button class="footer-button" type="submit">Подписаться
+                                <svg class="footer-svg-btn">
+                                    <use href="./images/sprite.svg#icon-icon-send"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </footer>
-
+<!-- ==========END FOOTER===================================================== -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
@@ -442,12 +458,12 @@
                     </div>
 
                     <div class="form-field">
-                        <label class="form-label" for="mail">Почта</label>
+                        <label class="form-label" for="mail-mod">Почта</label>
                         <span class="form-modal-input-wrapper">
                             <input class="form-input" 
                                 type="email" 
                                 name="mail" 
-                                id="mail"
+                                id="mail-mod"
                                 placeholder="my@mail.com" 
                             />
                             <svg class="modal-svg-btn-icon">
@@ -464,12 +480,11 @@
                             placeholder="Введите текст"
                         ></textarea>
                     </div>
-                    </div>
 
                     <div class="checkbox-input">
                         <input class="checkbox-modal-form visually-hidden"
                             type="checkbox" 
-                            name="" 
+                            name="checkbox" 
                             id="checkbox-pollicy"
                         />
                         <label class="checkbox-modal-form-pollicy" for="checkbox-pollicy">Соглашаюсь с рассылкой и принимаю <a class="modal-form-policy-link" href="">Условия договора</a></label>
@@ -479,11 +494,10 @@
                         <button class="modal-form-button" type="submit">Отправить</button>
                     </div>
                 </form>
-            
+            </div>
         </div>
     </div>
 
     <script src="./js/modal.js"></script>
 </body>
-
 </html>
